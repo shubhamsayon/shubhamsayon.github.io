@@ -1,0 +1,234 @@
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  
+}
+</style>
+
+<center><h1><span style="color: #ffffff; background-color: #000000;">FILE AND DIRECTORY PERMISSIONS</span></h1></center>
+<p>$ ls -l</p>
+<p style="text-align: left;"><b>Output:</b>&nbsp;-rw-rw-r-- 1 shubham shubham 6 Mar 31 18:38 File2</p>
+<p><b>What each symbol means:</b></p>
+<table style="height: 82px; width: 839px;">
+<tbody>
+<tr>
+<td style="width: 159px;"><strong>Permissions</strong></td>
+<td style="width: 62px;"><strong>Number</strong></td>
+<td style="width: 90px;"><strong>Owner name&nbsp; &nbsp; </strong></td>
+<td style="width: 104px;"><strong>Group name</strong></td>
+<td style="width: 129px;"><strong>Number of bytes in the file&nbsp;</strong></td>
+<td style="width: 171px;"><strong>Last modification time</strong></td>
+<td style="width: 92px;"><strong>File name&nbsp;</strong></td>
+</tr>
+<tr>
+<td style="width: 159px;">-rw-rw-r--</td>
+<td style="width: 62px;">1</td>
+<td style="width: 90px;">shubham</td>
+<td style="width: 104px;">shubham</td>
+<td style="width: 129px;">6</td>
+<td style="width: 171px;">&nbsp;Mar 31 18:38</td>
+<td style="width: 92px;">&nbsp;&nbsp;File2</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="height: 71px; width: 432px;">
+<tbody>
+<tr>
+<td style="width: 102px;"><strong>-</strong></td>
+<td style="width: 47px;">rw-</td>
+<td style="width: 184px;">rw-</td>
+<td style="width: 77px;">r--</td>
+</tr>
+<tr>
+<td style="width: 102px;"><strong>Type</strong></td>
+<td style="width: 47px;"><strong>Owner</strong></td>
+<td style="width: 184px;"><strong>Owner's Primary Group</strong></td>
+<td style="width: 77px;"><strong>&nbsp;Others</strong></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>PERMISSIONS AND SYMBOLS</strong></span><span style="background-color: #ffffff;">&nbsp;</span></p>
+<table style="height: 38px; width: 284px;">
+<tbody>
+<tr>
+<td style="width: 99px;"><span style="background-color: #ffffff; color: #000000;"><strong>SYMBOL</strong></span></td>
+<td style="width: 173px;"><span style="background-color: #ffffff; color: #000000;"><strong>PERMISSION</strong></span></td>
+</tr>
+<tr>
+<td style="width: 99px;">r</td>
+<td style="width: 173px;">Read</td>
+</tr>
+<tr>
+<td style="width: 99px;">w</td>
+<td style="width: 173px;">Write</td>
+</tr>
+<tr>
+<td style="width: 99px;">x</td>
+<td style="width: 173px;">Execute</td>
+</tr>
+<tr>
+<td style="width: 99px;">-</td>
+<td style="width: 173px;">None</td>
+</tr>
+</tbody>
+</table>
+<p><span style="text-decoration: underline;"><strong>PERMISSION FILE VS DIRECTORIES</strong></span>&nbsp;</p>
+<table style="height: 99px; width: 554px;">
+<tbody>
+<tr>
+<td style="width: 92px;"><span style="background-color: #ffffff; color: #000000;"><strong>PERMISSION</strong></span></td>
+<td style="width: 191px;"><span style="background-color: #ffffff; color: #000000;"><strong>FILE</strong></span></td>
+<td style="width: 265px;"><span style="background-color: #ffffff; color: #000000;"><strong>DIRECTORY</strong></span></td>
+</tr>
+<tr>
+<td style="width: 92px;">r</td>
+<td style="width: 191px;">Allows a file to be read.</td>
+<td style="width: 265px;">Allows file names in the directory to be read.</td>
+</tr>
+<tr>
+<td style="width: 92px;">w</td>
+<td style="width: 191px;">Allows a file to modified.</td>
+<td style="width: 265px;">Allows entries to be modified within the directory.</td>
+</tr>
+<tr>
+<td style="width: 92px;">x</td>
+<td style="width: 191px;">Allows the execution of a file.</td>
+<td style="width: 265px;">Allows access to contents and Metadata for entries.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>PERMISSION CATEGORIES</strong></span></p>
+<table style="height: 110px; width: 214px;">
+<tbody>
+<tr>
+<td style="width: 83px;"><span style="background-color: #ffffff; color: #000000;"><strong>SYMBOL</strong></span></td>
+<td style="width: 119px;"><span style="background-color: #ffffff; color: #000000;"><strong>PERMISSION</strong></span></td>
+</tr>
+<tr>
+<td style="width: 83px;">u</td>
+<td style="width: 119px;">User</td>
+</tr>
+<tr>
+<td style="width: 83px;">g</td>
+<td style="width: 119px;">Group</td>
+</tr>
+<tr>
+<td style="width: 83px;">o</td>
+<td style="width: 119px;">Other</td>
+</tr>
+<tr>
+<td style="width: 83px;">a</td>
+<td style="width: 119px;">All</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Command to change permission:&nbsp;</strong>chmod</p>
+<p><span style="text-decoration: underline;"><strong>Numeric Based Permissions</strong></span></p>
+<table style="height: 183px; width: 529px;">
+<tbody>
+<tr>
+<td style="width: 51px;"><span style="background-color: #ffffff; color: #000000;"><strong>Octal</strong></span></td>
+<td style="width: 71px;"><span style="background-color: #ffffff; color: #000000;"><strong>Binary</strong></span></td>
+<td style="width: 75px;"><span style="background-color: #ffffff; color: #000000;"><strong>String</strong></span></td>
+<td style="width: 310px;"><span style="background-color: #ffffff; color: #000000;"><strong>Description</strong></span></td>
+</tr>
+<tr>
+<td style="width: 51px;">0</td>
+<td style="width: 71px;">0</td>
+<td style="width: 75px;">---</td>
+<td style="width: 310px;">No Permissions</td>
+</tr>
+<tr>
+<td style="width: 51px;">1</td>
+<td style="width: 71px;">1</td>
+<td style="width: 75px;">--x</td>
+<td style="width: 310px;">Execute Only</td>
+</tr>
+<tr>
+<td style="width: 51px;">2</td>
+<td style="width: 71px;">10</td>
+<td style="width: 75px;">-w-</td>
+<td style="width: 310px;">Write Only</td>
+</tr>
+<tr>
+<td style="width: 51px;">3</td>
+<td style="width: 71px;">11</td>
+<td style="width: 75px;">-wx</td>
+<td style="width: 310px;">Write and Execute</td>
+</tr>
+<tr>
+<td style="width: 51px;">4</td>
+<td style="width: 71px;">100</td>
+<td style="width: 75px;">r--</td>
+<td style="width: 310px;">Read Only</td>
+</tr>
+<tr>
+<td style="width: 51px;">5</td>
+<td style="width: 71px;">101</td>
+<td style="width: 75px;">r-x</td>
+<td style="width: 310px;">Read and Execute</td>
+</tr>
+<tr>
+<td style="width: 51px;">6</td>
+<td style="width: 71px;">110</td>
+<td style="width: 75px;">rw-</td>
+<td style="width: 310px;">Read and Write</td>
+</tr>
+<tr>
+<td style="width: 51px;">7</td>
+<td style="width: 71px;">111</td>
+<td style="width: 75px;">rwx</td>
+<td style="width: 310px;">Read, Write and Execute</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>Commonly Used Permissions</strong></span></p>
+<table style="height: 149px; width: 150px;">
+<tbody>
+<tr>
+<td style="width: 89px;"><span style="background-color: #ffffff; color: #000000;"><strong>Symbolic</strong></span></td>
+<td style="width: 51px;"><span style="background-color: #ffffff; color: #000000;"><strong>Octal</strong></span></td>
+</tr>
+<tr>
+<td style="width: 89px;">-rwx------</td>
+<td style="width: 51px;">700</td>
+</tr>
+<tr>
+<td style="width: 89px;">-rwxr-xr-x</td>
+<td style="width: 51px;">755</td>
+</tr>
+<tr>
+<td style="width: 89px;">-rw-rw-r--</td>
+<td style="width: 51px;">664</td>
+</tr>
+<tr>
+<td style="width: 89px;">-rw-rw----</td>
+<td style="width: 51px;">660</td>
+</tr>
+<tr>
+<td style="width: 89px;">-rw-r--r--</td>
+<td style="width: 51px;">644</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>To Change Owner or Group of a File or Directory:</strong>&nbsp; chown username:groupname filename</li>
+</ul>
+<p><strong>Examples</strong></p>
+<img src="permissions.png" alt="layers" width="800" height="300" /></center>	

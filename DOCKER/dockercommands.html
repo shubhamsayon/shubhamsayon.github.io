@@ -1,0 +1,129 @@
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+  background-color: black;
+  color: white;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: black;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;color: black;}
+</style>
+
+<center>
+<h1 style="text-align: center;"><span style="text-decoration: underline; color: #800000;"><strong>DOCKER COMMANDS</strong></span></h1>
+<h2><span style="text-decoration: underline; color: #800000;">INSTALLING DOCKER</span></h2>
+<p>https://docs.docker.com/install/linux/docker-ce/centos/&nbsp;</p>
+<h2><span style="text-decoration: underline;"><span style="color: #800000; text-decoration: underline;"><strong>CONTAINER COMMANDS</strong></span></span></h2>
+<table style="height: 258px; width: 644px;">
+<tbody>
+<tr>
+<td style="width: 380px;"><span style="color: #008000;">$ docker ps</span></td>
+<td style="width: 248px;"><strong>to see the running containers</strong></td>
+</tr>
+<tr>
+<td style="width: 380px;"><span style="color: #008000;">$ docker ps -a </span></td>
+<td style="width: 248px;"><strong>to see all existing containers</strong></td>
+</tr>
+<tr>
+<td style="width: 380px;"><span style="color: #008000;">$ docker run container_id</span></td>
+<td style="width: 248px;"><strong>to run a container</strong></td>
+</tr>
+<tr>
+<td style="width: 380px;"><span style="color: #008000;">$ docker stop container_id</span></td>
+<td style="width: 248px;"><strong>to stop a container</strong></td>
+</tr>
+<tr>
+<td style="width: 380px;"><span style="color: #008000;">$ docker run -d container_id</span></td>
+<td style="width: 248px;"><strong>to run container in background</strong>&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 380px;"><span style="color: #008000;">$ docker exec -it container_id&nbsp; /bin/bash</span></td>
+<td style="width: 248px;"><strong>to run container in interactive mode</strong></td>
+</tr>
+<tr>
+<td style="width: 380px;"><span style="color: #008000;">$ docker rm contaier_id</span></td>
+<td style="width: 248px;"><strong>to remove container</strong></td>
+</tr>
+<tr>
+<td style="width: 380px;"><span style="color: #008000;">$ docker rename container_oldName container_Newname</span></td>
+<td style="width: 248px;"><strong>to rename a container</strong></td>
+</tr>
+<tr>
+<td style="width: 380px;"><span style="color: #008000;">$ docker rm container1_id container2_id container3_id</span></td>
+<td style="width: 248px;"><strong>delete multiple containers at once</strong></td>
+</tr>
+<tr>
+<td style="width: 380px;"><span style="color: #008000;">$ docker rm container_name --force</span></td>
+<td style="width: 248px;">&nbsp;<strong>forcefully delete a running container</strong></td>
+</tr>
+</tbody>
+</table>
+<h2><span style="text-decoration: underline;"><span style="color: #800000; text-decoration: underline;"><strong>DOCKER IMAGE COMMANDS</strong></span></span></h2>
+<table style="height: 94px; width: 610px;">
+<tbody>
+<tr>
+<td style="width: 330px;"><span style="color: #008000;">$ docker images</span></td>
+<td style="width: 270px;"><strong>to list the docker images&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></td>
+</tr>
+<tr>
+<td style="width: 330px;"><span style="color: #008000;">$ docker images image_name</span></td>
+<td style="width: 270px;"><strong>to list diff versions of a particular image</strong></td>
+</tr>
+<tr>
+<td style="width: 330px;"><span style="color: #008000;">$ docker image pull image_name:imsge_version</span></td>
+<td style="width: 270px;"><strong>to pull a specific version of an image</strong></td>
+</tr>
+<tr>
+<td style="width: 330px;"><span style="color: #008000;">$ docker image pull --all-tags nginx</span></td>
+<td style="width: 270px;"><strong>to download all versions of an image</strong></td>
+</tr>
+<tr>
+<td style="width: 330px;"><span style="color: #008000;">$ docker image rmi image_name</span></td>
+<td style="width: 270px;"><strong>to remove an image</strong></td>
+</tr>
+</tbody>
+</table>
+<h3><span style="text-decoration: underline; color: #800000;"><strong>To Push an Image to Docker Hub</strong></span></h3>
+<p><span style="color: #008000;">$ docker login</span> (enter username and password)</p>
+<p><span style="color: #008000;">$ docker tag image_name repo_name/image_name:v1</span> (here image_name:v1 is just the tag for ur image on docker hub)</p>
+<p><span style="color: #008000;">$ docker push repo_name/image_name:v1</span>&nbsp;</p>
+<h3><span style="text-decoration: underline; color: #800000;"><strong>Port Forwarding/Mapping</strong></span></h3>
+
+<span style="color: #008000;">$ docker run -itd -p 8001:80 container_id</span></br>
+<span style="color: #008000;">$ docker port container_name</span>&nbsp; (this will display the port mapping)
+<p>
+<div class="pagination"><a href="dockercommands.html">BASIC DOCKER COMMANDS</a> <a href="dockercontainerandimages.html">DOCKER CONTAINER AND IMAGES</a></div>
+</p>
+</center>

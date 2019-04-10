@@ -1,0 +1,48 @@
+<style>
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+  background-color: black;
+  color: white;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: black;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;color: black;}
+
+</style>
+<h1 style="text-align: center;"><span style="text-decoration: underline; color: #800000;"><strong>DOCKER ARCHITECTURE</strong></span></h1>
+<h3><span style="color: #800000;"><strong><u>Note:</u></strong></span></h3>
+<ul>
+<li><strong><span style="color: #003366;">Docker file</span> is <span style="color: #333300;">BUILD</span></strong></li>
+<li><strong><span style="color: #003366;">Docker Image</span> is <span style="color: #333300;">SHIPPED</span></strong></li>
+<li><strong><span style="color: #003366;">Docker Container</span> is <span style="color: #333300;">RUN&nbsp;</span></strong></li>
+</ul>
+<h2><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">Docker has 3 main components:</span></span></h2>
+<ol>
+<li><strong><span style="color: #008000;">Docker Client</span></strong></li>
+<li><strong><span style="color: #008000;">Docker Host&nbsp;</span></strong></li>
+<li><strong><span style="color: #008000;">Docker Registry</span></strong></li>
+</ol>
+<h2><span style="color: #800000;"><u>Docker Client</u></span></h2>
+<h3>Machine or medium through which users interact with docker host. The two basic ways of interacting are&nbsp;<em><span style="color: #008000;">Docker CLI</span> and <span style="color: #008000;">Docker API's.</span></em></h3>
+<h2><span style="color: #800000;"><u>Docker Host</u></span></h2>
+<h3>This is the machine which actually performs the task of <span style="color: #333300;">containarization</span>. It runs the docker daemon which listens to and performs the actions asked by docker client. It builds the <span style="color: #333300;">docker file</span> and turns it to <span style="color: #333300;">docker image.</span></h3>
+<h2><span style="color: #800000;"><u>Docker Host</u></span></h2>
+<h3>It is the placeholder for docker images and makes the images available to other users.&nbsp;</h3>
+<center><p><img src="https://cdn-images-1.medium.com/max/1000/1*bIQOZL_pZujjrfaaYlQ_gQ.png" alt="" width="388" height="269" /></p>
+<div class="pagination"><a href="dockerArchitecture.html">Docker Architecture</a> <a href="dockerfile.html">Dockerfile</a></div>
+</center>

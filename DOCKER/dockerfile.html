@@ -1,0 +1,78 @@
+<style>
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+  background-color: black;
+  color: white;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: black;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;color: black;}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  
+}
+</style>
+<h1 style="text-align: center;"><span style="text-decoration: underline;"><span style="color: #800000; text-decoration: underline;">DOCKERFILE</span></span></h1>
+<h3>Dockerfile is a simple text file composed of various arguements and commands listed successively to automatically perform actions on a base image in order to create a new one.&nbsp;Docker can build images automatically by reading the instructions from a Docekrfile.</h3>
+<h3><span style="text-decoration: underline;">Points to remember about Dockerfile</span></h3>
+<ul>
+<li><span style="color: #333300;"><strong>sequential set of instructions for the Docker engine</strong></span></li>
+<li><span style="color: #333300;"><strong>Order of instructions in dockerfile is very important</strong></span></li>
+<li><span style="color: #333300;"><strong>Each instruction creates a layer and these layers can be reused later i.e. if two docker files need the same layer docker daemon can reuse the precreated layer.</strong></span></li>
+<li><span style="color: #333300;"><strong>Dckerfile has no extension</strong></span></li>
+</ul>
+<h3>The Intructions in a Dockerfile can be categorized as:</h3>
+<table style="height: 91px; width: 385px;">
+<tbody>
+<tr>
+<td style="width: 234px;"><span style="color: #003300;"><strong>FUNDAMENTAL INSTRUCTIONS</strong></span></td>
+<td style="width: 141px;"><strong>FROM, ARG</strong></td>
+</tr>
+<tr>
+<td style="width: 234px;"><span style="color: #003300;"><strong>CONFIGURATION INTSRUCTIONS</strong></span></td>
+<td style="width: 141px;"><strong>RUN,ADD,COPY,ENV</strong></td>
+</tr>
+<tr>
+<td style="width: 234px;"><span style="color: #003300;"><strong>EXECUTION INSTRUCTIONS</strong></span></td>
+<td style="width: 141px;"><strong>CMD,EXPOSE</strong></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>(complete the lessons on docker images and containers before doing this lab)</strong></p>
+<p><strong>LAB: <a title="dockerfilelab" href="https://docs.google.com/document/d/1bfbxBba2sSSpV_dhF321N9-Z86xnfs4bXJZUOV__8_k/edit?usp=sharing">Installing Apache webserver via docker file</a></strong></p>
+
+<center>
+<div class="pagination">
+  <a href="dockerArchitecture.html">Docker Architecture</a>
+  <a href="dockerfile.html">Dockerfile</a>
+</div>
+
