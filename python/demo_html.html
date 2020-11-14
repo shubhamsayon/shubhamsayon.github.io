@@ -1,6 +1,36 @@
+
 <html>
 	<head>
 		<title>Web Scraping</title>
+		<style>
+#blogs {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#blogs td, #blogs th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#blogs tr:nth-child(even){background-color: #f2f2f2;}
+
+#blogs tr:hover {background-color: #ddd;}
+
+#blogs th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
+}
+.myDiv {
+  background-color: lightblue;    
+  text-align: center;
+}
+</style>
+
 	</head>
 	<body>
 		<h1>How HTML Works?</h1>
@@ -8,6 +38,40 @@
 		<p>Image Below! </p>
 		<img src="ratrace.jpg" alt="Leaving The Rat Race With Python" width="250" height="345">
 		<p>Subscribe to <a href="https://blog.finxter.com/">FINXTER!</a></p>
+		<div class="myDiv">
+  			<p>Copy and Paste the given links on the URL to Read Some Amazing Articles!</p>
+		</div>
+		<table id="blogs">
+		   <tr>
+		    <th>TOPIC</th>
+		    <th>LINK</th>
+		  </tr>
+		  <tr>
+		    <td>__str__ vs __repr__ In Python</td>
+		    <td>https://blog.finxter.com/python-__str__-vs-__repr__/</td>
+		  </tr>
+		  <tr>
+		    <td>How to Read a File Line-By-Line and Store Into a List?</td>
+		    <td>https://blog.finxter.com/how-to-read-a-file-line-by-line-and-store-into-a-list/</td>
+		  </tr>
+		  <tr>
+		    <td>How To Convert a String To a List In Python?</td>
+		    <td>https://blog.finxter.com/how-to-convert-a-string-to-a-list-in-python/</td>
+		  </tr>
+		  <tr>
+		    <td>How To Iterate Through Two Lists In Parallel?</td>
+		    <td>https://blog.finxter.com/how-to-iterate-through-two-lists-in-parallel/</td>
+		  </tr>
+		  <tr>
+		    <td>Python Scoping Rules – A Simple Illustrated Guide</td>
+		    <td>https://blog.finxter.com/python-scoping-rules-a-simple-illustrated-guide/</td>
+		  </tr>
+		  <tr>
+		    <td>Flatten A List Of Lists In Python</td>
+		    <td>https://blog.finxter.com/flatten-a-list-of-lists-in-python/</td>
+		  </tr>
+		</table>
+
 		<hr>
 		<p>&#169;finxter.com</p>
 	</body>
