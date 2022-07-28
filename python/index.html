@@ -1,68 +1,41 @@
-
-<!DOCTYPE html>
 <html>
-<head>
-<style>
-header {
-  background-color: #00bfff;
-  color: white;
-}
-div.gallery {
-  margin: 15px;
-  float: left;
-  width: 280px;
-  height: 145px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: 100%;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-</style>
-</head>
-<body>
-<center>
-<header>
-<h1 class="western" align="center">PYTHON</h1>
-</header>
-<div class="gallery">
-  <a target="_blank" href="finxter/pg1.html">
-    <img src="finxter.png"  width="600" height="400">
-  </a>
-  <div class="desc"><b>FINXTER BLOGS</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="#">
-    <img src="books.png" width="600" height="400">
-  </a>
-  <div class="desc">BOOKS</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="ProjectList.html">
-    <img src="projects.png"  width="600" height="400">
-  </a>
-  <div class="desc">PROJECTS</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="#">
-    <img src="courses.png"  width="800" height="600">
-  </a>
-  <div class="desc">COURSES</div>
-</div>
-
-</body>
+  <head>
+    <title>Google recapcha v3 demo - Codeforgeek</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://www.google.com/recaptcha/api.js?render=put your site key here"></script>
+  </head>
+  <body>
+    <h1>Google reCAPTHA Demo</h1>
+    <form id="comment_form" action="form.php" method="post" >
+      <input type="email" name="email" placeholder="Type your email" size="40"><br><br>
+      <textarea name="comment" rows="8" cols="39"></textarea><br><br>
+      <input type="submit" name="submit" value="Post comment"><br><br>
+    </form>
+      <script>
+       // when form is submit
+    $('#comment_form').submit(function() {
+        // we stoped it
+        event.preventDefault();
+        var email = $('#email').val();
+        var comment = $("#comment").val();
+        // needs for recaptacha ready
+        grecaptcha.ready(function() {
+            // do request for recaptcha token
+            // response is promise with passed token
+            grecaptcha.execute('put your site key here', {action: 'create_comment'}).then(function(token) {
+                // add token to form
+                $('#comment_form').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+                    $.post("form.php",{email: email, comment: comment, token: token}, function(result) {
+                            console.log(result);
+                            if(result.success) {
+                                    alert('Thanks for posting comment.')
+                            } else {
+                                    alert('You are spammer ! Get the @$%K out.')
+                            }
+                    });
+            });;
+        });
+  });
+  </script>
+  </body>
 </html>
-
