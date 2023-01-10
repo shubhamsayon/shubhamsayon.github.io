@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +9,13 @@ header {
 }
 
 div.gallery {
-  margin: 30px;
+  text-align: center;
   border: 0px solid #ccc;
-  float: left;
-  width: 200px;
+  width: 100%;
 }
+
+td{
+background-color:LightGray;}
 
 div.gallery:hover {
   border: 0px solid #777;
@@ -23,10 +26,10 @@ div.gallery img {
   height: auto;
 }
 
-div.desc {
-  padding: 15px;
-  text-align: center;
+div.gallery a{
+	 text-decoration:none
 }
+
 </style>
 </head>
 <body>
@@ -35,42 +38,66 @@ div.desc {
 <h1 style="text-align: center;"><strong>VIEW PROJECT</strong></span></h1>
 </p>
 </header>
+
+<table>
+
+
+<tr> 
+<td>
 <div class="gallery">
   <a target="_blank" href="https://blog.finxter.com/the-power-of-automation-using-python-segregating-images-based-on-dimensions/">
     <h3> ⚙️ The Power of Automation Using Python – Segregating Images Based on Dimensions </h3>
   </a>
  
 </div>
+</td>
 
+<td>
 <div class="gallery">
   <a target="_blank" href="https://youtu.be/uKe_URUhx1w">
     <h3> ⚙️ Create Your Virtual Assistant Like Alexa Using Python </h3>
   </a>
 </div>
+</td>
 
+<td>
 <div class="gallery">
   <a target="_blank" href="https://blog.finxter.com/automate-backup-to-google-drive-with-python/">
     <h3> ⚙️ Automate Backup to Google Drive with Python </h3>
   </a>
 </div>
+</td>
 
+<td>
 <div class="gallery">
   <a target="_blank" href="https://blog.finxter.com/receive-automated-email-notification-on-website-update/">
     <h3> ⚙️ Receive Automated Email Notification on Website Update </h3>
   </a>
 </div>
+</td>
+</tr> 
 
+
+
+<tr> 
+<td>
 <div class="gallery">
   <a target="_blank" href="https://blog.finxter.com/block-websites-using-python-in-windows/">
     <h3> ⚙️ Block Websites Using Python in Windows </h3>
   </a>
 </div>
+</td>
 
+<td>
 <div class="gallery">
   <a target="_blank" href="https://blog.finxter.com/the-art-of-automating-whatsapp-messages-using-python/">
     <h3> ⚙️ The Art of Automating Whatsapp Messages Using Python </h3>
   </a>
 </div>
+</td>
+</tr> 
+
+</table>
 
 </body>
 </html>
